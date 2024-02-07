@@ -5,8 +5,8 @@ function NavBar() {
   const tabs = ["Home", "Work", "Careers", "", "News"];
   console.log(dot);
   return (
-    <div className="w-full">
-      <div className="max-w-screen-xl  mx-auto py-8 border-b-[1px] border-zinc-700 flex  gap-[110px]">
+    <div className="NAVBAR w-full">
+      <div className="max-w-screen-xl px-4 mx-auto pt-8 pb-6 border-b-[1px] border-zinc-700 flex align-center  gap-[110px]">
         <div className="REFOKUS_IMAGE">
           <img
             src="https://assets-global.website-files.com/6334198f239547d0f9cd84b3/63349803431f1562dccf1802_refokus%20logo.svg"

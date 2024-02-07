@@ -1,11 +1,11 @@
-import { BsArrowReturnRight } from "react-icons/bs";
-
-function Button(title = "Start a Project") {
+/* eslint-disable react/prop-types */
+import { IoIosReturnRight } from "react-icons/io";
+function Button({ title = "Start a Project" }) {
   return (
-    <Button className="flex gap-[2] rounded-full bg-zinc-200 text-black">
-      <p>{title}</p>
-      <BsArrowReturnRight />
-    </Button>
+    <div className="flex items-center gap-2 bg-zinc-200 text-black rounded-full px-3 py-1">
+      <span>{title}</span>
+      <IoIosReturnRight />
+    </div>
   );
 }
 
