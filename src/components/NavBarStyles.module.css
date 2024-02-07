@@ -1,0 +1,18 @@
+.dot::before {
+  content: "";
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  /* background-color: linear; */
+  background-color: #00ff19;
+  box-shadow: 1rem 1rem 1rem #00ff19;
+  position: absolute;
+  left: -20%;
+  top: +50%;
+  z-index: 200;
+  transform: translateY(-50%);
+}
+
+.y {
+  font-size: 100px;
+}
