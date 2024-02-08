@@ -1,11 +1,16 @@
-import { dot } from "./NavBarStyles.module.css";
+import { dot, fixer } from "./NavBarStyles.module.css";
 import Button from "./Button";
+import { useEffect } from "react";
 
 function NavBar() {
   const tabs = ["Home", "Work", "Careers", "", "News"];
+
   console.log(dot);
   return (
-    <div className="NAVBAR w-full">
+    <div
+      className={`NAVBAR w-full ${fixer}`}
+      style={{ backgroundColor: "#161616" }}
+    >
       <div className="max-w-screen-xl px-4 mx-auto pt-8 pb-6 border-b-[1px] border-zinc-700 flex align-center  gap-[110px]">
         <div className="REFOKUS_IMAGE">
           <img

@@ -1,4 +1,6 @@
 import Marquee from "./Marquee";
+
+import { motion } from "framer-motion";
 function Marquees() {
   const images = [
     {
@@ -39,14 +41,74 @@ function Marquees() {
   return (
     <div className="w-full flex flex-col gap-[4rem] mt-[300px] mb-[250px]">
       <div className="w-full overflow-x-hidden flex">
-        {images.map((image, index) => (
-          <Marquee key={index} image={image.url} />
-        ))}
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{
+            ease: "linear",
+            duration: 30,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="flex shrink-0"
+        >
+          {images.map((image, index) => (
+            <Marquee key={index} image={image.url} />
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: "-100%" }}
+          transition={{
+            ease: "linear",
+            duration: 30,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="flex shrink-0"
+        >
+          {images.map((image, index) => (
+            <Marquee key={index} image={image.url} />
+          ))}
+        </motion.div>
       </div>
-      <div className="w-full overflow-x-hidden flex">
-        {images.map((image, index) => (
-          <Marquee key={index} image={image.url} />
-        ))}
+      <div
+        style={{
+          background:
+            "linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(13,13,13,0.75) 7%, rgba(32,32,33,0.5) 17%, rgba(0,0,0,0) 34%, rgba(0,0,0,0) 64%, rgba(0,0,0,0) 65%, rgba(0,0,0,0.5) 84%, rgba(0,0,0,0.75) 94%, rgba(0,0,3,1) 100%)",
+        }}
+        className="w-full overflow-x-hidden flex"
+      >
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 30,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="flex shrink-0"
+        >
+          {images.map((image, index) => (
+            <Marquee key={index} image={image.url} />
+          ))}
+        </motion.div>
+        <motion.div
+          initial={{ x: "-100%" }}
+          animate={{ x: 0 }}
+          transition={{
+            ease: "linear",
+            duration: 30,
+            repeat: Infinity,
+            repeatType: "loop",
+          }}
+          className="flex shrink-0"
+        >
+          {images.map((image, index) => (
+            <Marquee key={index} image={image.url} />
+          ))}
+        </motion.div>
       </div>
     </div>
   );

@@ -9,7 +9,7 @@ function Cards() {
       bottom: "Expore what drives our team.",
       Bigtopic: "",
       button: "",
-      width: "35%",
+      width: 32.5,
     },
     {
       top: "Get in Touch",
@@ -17,12 +17,12 @@ function Cards() {
       bottom: "",
       Bigtopic: "Start a Project",
       button: "contact us",
-      width: "65%",
+      width: 62.5,
     },
   ];
   return (
     <div className="w-full mt-[5rem] text-zinc-200 ">
-      <div className="max-w-screen-xl mx-auto flex gap-2">
+      <div className="max-w-screen-xl mx-auto flex gap-[3px]">
         {cards.map((card, index) => (
           <Card
             key={index}
@@ -31,7 +31,7 @@ function Cards() {
             bottom={card.bottom}
             Bigtopic={card.Bigtopic}
             button={card.button}
-            width={card.width}
+            cardwidth={card.width}
           />
         ))}
       </div>

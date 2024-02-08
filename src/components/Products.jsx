@@ -1,4 +1,6 @@
 import Product from "./Product";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 function Products() {
   const products = [
@@ -59,8 +61,11 @@ function Products() {
       case: true,
     },
   ];
+
+  const [pos, setPos] = useState(0);
+  console.log(pos);
   return (
-    <div className="mt-[10vw] w-full text-zinc-100">
+    <div className="mt-[10vw]  relative h-fit w-full text-zinc-100">
       {products.map((product, index) => (
         <Product
           key={index}
@@ -68,8 +73,79 @@ function Products() {
           description={product.description}
           live={product.live}
           pcase={product.case}
+          pos={pos}
+          setPos={setPos}
+          index={index}
         />
       ))}
+      <div className="absolute w-full h-full top-0  pointer-events-none">
+        <motion.div
+          initial={{ y: 0 }}
+          animate={{ y: `${pos}rem` }}
+          transition={{ ease: [0.76, 0, 0.24, 1], duration: 0.4 }}
+          className="WINDOW h-[23rem] w-[32rem] absolute bg-sky-100 left-[38%] overflow-hidden rounded-lg"
+        >
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full "
+          >
+            <video autoPlay loop muted className="object-contain">
+              <source
+                src="src\assets\Arqitel project video 4_3.webm"
+                type="video/mp4"
+              />
+            </video>
+          </motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full "
+          >
+            <video autoPlay loop muted className="object-contain">
+              <source
+                src="src\assets\Cula_promo_new_4_3.mp4"
+                type="video/mp4"
+              />
+            </video>
+          </motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-300"
+          >
+            {" "}
+            <video autoPlay loop muted className="object-contain">
+              <source src="src\assets\Maniv-Compressed.mp4" type="video/mp4" />
+            </video>
+          </motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-400"
+          ></motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-100"
+          ></motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-200"
+          ></motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-300"
+          ></motion.div>
+          <motion.div
+            initial={{ y: 0 }}
+            animate={{ y: `-${pos}rem` }}
+            className="w-full h-full bg-sky-400"
+          ></motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 }

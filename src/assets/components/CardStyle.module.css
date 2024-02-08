@@ -1,0 +1,9 @@
+.card:hover .top {
+  padding-inline: 1rem;
+}
+.cardbg:hover {
+  background-color: #7443ff;
+}
+.top {
+  transition: padding 0.4s;
+}

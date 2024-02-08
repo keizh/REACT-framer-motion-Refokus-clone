@@ -1,13 +1,15 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
 import { IoIosReturnRight } from "react-icons/io";
 import CardStyle from "./CardStyle.module.css";
 
-function Card({ top, smalltopic, bottom, Bigtopic, button, width }) {
+function Card({ top, smalltopic, bottom, Bigtopic, button, cardwidth }) {
   return (
     <div
+      style={{ width: `${cardwidth}%` }}
       className={`CARD ${
         CardStyle.card
-      } w-[${width}] h-[45vh] flex flex-col gap-[20px] bg-zinc-700  rounded-[1.3rem] py-[1rem] px-[1.4rem] shrink-0 ${
+      }    flex flex-col shrink-0 h-[45vh] gap-[20px] bg-zinc-700  rounded-[1.3rem] py-[1rem] px-[1.4rem]  ${
         button ? CardStyle.cardbg : `hover:bg-zinc-600`
       }`}
     >

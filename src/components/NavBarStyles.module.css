@@ -16,3 +16,11 @@
 .y {
   font-size: 100px;
 }
+
+.fixer {
+  position: fixed;
+  width: full;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}

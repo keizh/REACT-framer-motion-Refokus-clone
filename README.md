@@ -45,3 +45,37 @@ Products Component
 live case
 
 document.querySlectpr c-marquee-wrapper
+
+Assignment 2:
+
+Lets Start animation's
+
+smoothness = locomotive JS
+
+Complete images scroll framer motion
+
+Assignment 3:
+
+pointer-events-none
+
+40
+43
+
+onMouse enter
+
+motion.div
+
+initial {onbject}
+animate { object}
+transition {{ease , duration}}
+
+easing.net
+
+Assignment 4: marquee
+
+infinite animation
+
+Whilehover{{css}}
+
+--------------------------------->
+https://uigradients.com/#Moonrise
