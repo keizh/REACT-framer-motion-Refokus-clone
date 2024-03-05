@@ -2,14 +2,14 @@ import Product from "./Product";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-import arqitel from "../assets/Arqitel project video 4_3.webm";
-import cula from "../assets/Cula_promo_new_4_3.mp4";
-import maniv from "../assets/Maniv-Compressed.mp4";
-import summon from "../assets/summon.webm";
-import yahoo from "../assets/yahoo.webm";
-import weglot from "../assets/weglot.web";
-import candid from "../assets/Candid Health 4_3_H.264.webm";
-import showcase from "../assets/showcase_4_3.mp4";
+import arqitel from "../assets/videos/arqitel.webm";
+import cula from "../assets/videos/cula.mp4";
+import maniv from "../assets/videos/maniv.mp4";
+import summon from "../assets/videos/summon.webm";
+import yahoo from "../assets/videos/yahoo.webm";
+import weglot from "../assets/videos/weglot.webm";
+import candid from "../assets/videos/candid.webm";
+import showcase from "../assets/videos/showcase.mp4";
 
 function Products() {
   const products = [
@@ -110,7 +110,7 @@ function Products() {
             className="w-full h-full "
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={arqitel} type="video/mp4" />
+              <source src={`${arqitel}`} type="video/mp4" />
             </video>
           </motion.div>
           {/*second */}
@@ -120,7 +120,7 @@ function Products() {
             className="w-full h-full "
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={cula} type="video/mp4" />
+              <source src={`${cula}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* third */}
@@ -130,7 +130,7 @@ function Products() {
             className="w-full h-full "
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={maniv} type="video/mp4" />
+              <source src={`${maniv}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* forth */}
@@ -140,7 +140,7 @@ function Products() {
             className="w-full h-full bg-sky-400"
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={summon} type="video/mp4" />
+              <source src={`${summon}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* fifth */}
@@ -150,7 +150,7 @@ function Products() {
             className="w-full h-full bg-sky-100"
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={yahoo} type="video/mp4" />
+              <source src={`${yahoo}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* sixth */}
@@ -160,7 +160,7 @@ function Products() {
             className="w-full h-full bg-sky-200"
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={weglot} type="video/mp4" />
+              <source src={`${weglot}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* seventh */}
@@ -170,7 +170,7 @@ function Products() {
             className="w-full h-full bg-sky-300"
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={candid} type="video/mp4" />
+              <source src={`${candid}`} type="video/mp4" />
             </video>
           </motion.div>
           {/* eigth */}
@@ -180,7 +180,7 @@ function Products() {
             className="w-full h-full bg-sky-400"
           >
             <video autoPlay loop muted className="object-contain">
-              <source src={showcase} type="video/mp4" />
+              <source src={`${showcase}`} type="video/mp4" />
             </video>
           </motion.div>
         </motion.div>
